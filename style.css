@@ -14,19 +14,22 @@ label{
 }
 #Main{
 	font-size: 25px;
-	margin-left: 710px;
+	margin-left: 40%;
 }
 .questions{
-	margin-left: 50%;
+	margin-left: 45%;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
 .questions0{
-	margin-left: 50%;
+	margin-left: 45%;
 }
 .answers{
-	margin-left: 45%;
+	margin-left: 50%;
 }
 .answers0{
-	margin-left: 45%;
+	margin-left: 50%;
+}
+.radio{
+	margin-left: 65%;
 }

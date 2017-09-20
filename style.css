@@ -1,13 +1,13 @@
 body{
-	
+
 }
 .input{
-	margin-left: 750px;
+	margin-left: 45%;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
 label{
-	margin-left: 750px;
+	margin-left: 45%;
 }
 .input:hover{
 	border: 2px solid pink;
@@ -17,16 +17,16 @@ label{
 	margin-left: 710px;
 }
 .questions{
-	margin-left: 750px;
+	margin-left: 50%;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
 .questions0{
-	margin-left: 820px;
+	margin-left: 50%;
 }
 .answers{
-	margin-left: 750px;
+	margin-left: 45%;
 }
 .answers0{
-	margin-left: 750px;
+	margin-left: 45%;
 }

@@ -5,19 +5,21 @@
 	<script src="jquery.js"></script>
 	<script>
 	$(document).ready(function(){
+		$("#Main").hide();
 		$("#Exect-settings").click(function(){
 			$("#start").hide();
+			$("#Main").show();
 			var MainQuestion = $("#Main-Question").val();
 			var NumberQuestion = $("#number-of-questions").val();
 			var NumberAnswers = $("#number-of-answers").val();
 			for(var i = 1; i <= NumberQuestion; i++){
-				var construct = document.createElement("input");
-				document.body.appendChild(construct);
-				var construct2 = document.createElement("br");
-				document.body.appendChild(construct2);
-				
-				
-			};
+				$('<div class="questions0"> Вопрос ' + i +'</div>').appendTo('#Exect');
+				$('<input class="questions">').appendTo('#Exect');
+				for(var b = 1; b <= NumberAnswers; b++){
+					$('<div class="answers0"> Ответ ' + b +'</div>').appendTo('#Exect');
+					$('<input class="answers">').appendTo('#Exect');
+				}
+			}
 		})
 	})
 	</script>
@@ -34,8 +36,9 @@
 	<input type="number" id="number-of-answers" class="input"><br>
 	<input type="button" id="Exect-settings" value="Подтвердить и перейти к точным настрокам!" class="input">
 	</form>
-	<form action="index.html" class="Exect-settings-form">
-		
+	<div id="Main"></div>
+	<form action="index.html" id="Exect">
+
 	</form>
 </body>
 </html>

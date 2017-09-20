@@ -2,13 +2,31 @@ body{
 	
 }
 .input{
-	margin-left: 500px;
+	margin-left: 750px;
 	margin-bottom: 10px;
 	border-radius: 5px;
 }
 label{
-	margin-left: 500px;
+	margin-left: 750px;
 }
 .input:hover{
 	border: 2px solid pink;
+}
+#Main{
+	font-size: 25px;
+	margin-left: 710px;
+}
+.questions{
+	margin-left: 750px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+.questions0{
+	margin-left: 820px;
+}
+.answers{
+	margin-left: 750px;
+}
+.answers0{
+	margin-left: 750px;
 }

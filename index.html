@@ -8,19 +8,27 @@
 		$("#Main").hide();
 		$("#sub").hide();
 		$("#Exect-settings").click(function(){
-			$("#start").hide();
-			$("#Main").show();
-			$("#sub").show();
 			var MainQuestion = $("#Main-Question").val();
 			var NumberQuestion = $("#number-of-questions").val();
 			var NumberAnswers = $("#number-of-answers").val();
-			for(var i = 1; i <= NumberQuestion; i++){
-				$('<div class="questions0"> Вопрос ' + i +'</div>').appendTo('#Exect');
-				$('<input type="text" class="questions">').appendTo('#Exect');
-				for(var b = 1; b <= NumberAnswers; b++){
-					$('<div class="answers0"> Ответ ' + b +'</div>').appendTo('#Exect');
-					$('<input type="text" class="answers">').appendTo('#Exect');
-					$('<div class="radio"><input type="radio" checked name="true '+ i +'"/></div>').appendTo('#Exect');
+			if(MainQuestion == ""){
+				alert("Введите название общего вопроса");
+			} else if(NumberQuestion < 1){
+				alert("Введите количество вопросов в викторине");
+			} else if(NumberAnswers < 1){
+				alert("Введите количество возможных ответов на каждый вопрос");
+			} else {
+				$("#start").hide();
+				$("#Main").show();
+				$("#sub").show();
+				for (var i = 1; i <= NumberQuestion; i++) {
+					$('<div class="questions0"> Вопрос ' + i + '</div>').appendTo('#Exect');
+					$('<input type="text" class="questions">').appendTo('#Exect');
+					for (var b = 1; b <= NumberAnswers; b++) {
+						$('<div class="answers0"> Ответ ' + b + '</div>').appendTo('#Exect');
+						$('<input type="text" class="answers">').appendTo('#Exect');
+						$('<div class="radio"><input type="radio" checked name="true ' + i + '"/></div>').appendTo('#Exect');
+					}
 				}
 			}
 		})

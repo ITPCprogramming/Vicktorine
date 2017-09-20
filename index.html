@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style.css">
+	<script src="jquery.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#Exect-settings").click(function(){
+			$("#start").hide();
+			var MainQuestion = $("#Main-Question").val();
+			var NumberQuestion = $("#number-of-questions").val();
+			var NumberAnswers = $("#number-of-answers").val();
+			for(var i = 1; i <= NumberQuestion; i++){
+				var construct = document.createElement("input");
+				document.body.appendChild(construct);
+				var construct2 = document.createElement("br");
+				document.body.appendChild(construct2);
+				
+				
+			};
+		})
+	})
+	</script>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="index.html" method="POST" id="start">
+	<label for="Main-Question">Введите название главного вопроса</label>
+	<input type="text" id="Main-Question" class="input"><br>
+	<label for="number-of-questions">Введите количество вопросов</label>
+	<input type="number" id="number-of-questions" class="input"><br>
+	<label for="number-of-answers">Введите количество ответов</label>
+	<input type="number" id="number-of-answers" class="input"><br>
+	<input type="button" id="Exect-settings" value="Подтвердить и перейти к точным настрокам!" class="input">
+	</form>
+	<form action="index.html" class="Exect-settings-form">
+		
+	</form>
+</body>
+</html>

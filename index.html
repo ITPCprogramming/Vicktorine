@@ -6,9 +6,11 @@
 	<script>
 	$(document).ready(function(){
 		$("#Main").hide();
+		$("#sub").hide();
 		$("#Exect-settings").click(function(){
 			$("#start").hide();
 			$("#Main").show();
+			$("#sub").show();
 			var MainQuestion = $("#Main-Question").val();
 			var NumberQuestion = $("#number-of-questions").val();
 			var NumberAnswers = $("#number-of-answers").val();
@@ -41,6 +43,6 @@
 	<form action="index.html" id="Exect">
 
 	</form>
-	<input type="button" value="Посмотреть" id="sub">
+	<input type="button" value="Посмотреть" id="sub" class="input">
 </body>
 </html>

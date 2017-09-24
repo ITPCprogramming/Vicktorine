@@ -8,7 +8,7 @@
 		$("#Main").hide();
 		$("#sub").hide();
 		$("#Exect-settings").click(function(){
-			var MainQuestion = $("#Main-Question").val();
+			var MainQuestion = $("#Main-Question").val() + "?";
 			var NumberQuestion = $("#number-of-questions").val();
 			var NumberAnswers = $("#number-of-answers").val();
 			if(MainQuestion == ""){
@@ -23,13 +23,27 @@
 				$("#sub").show();
 				for (var i = 1; i <= NumberQuestion; i++) {
 					$('<div class="questions0"> Вопрос ' + i + '</div>').appendTo('#Exect');
-					$('<input type="text" class="questions">').appendTo('#Exect');
+					$('<input type="text" class="questions" id="' + i + '">').appendTo('#Exect');
+					var questions = $(".questions1").val() + i;
 					for (var b = 1; b <= NumberAnswers; b++) {
 						$('<div class="answers0"> Ответ ' + b + '</div>').appendTo('#Exect');
-						$('<input type="text" class="answers">').appendTo('#Exect');
+						$('<input type="text" class="answers" name="true ' + i + '">').appendTo('#Exect');
 						$('<div class="radio"><input type="radio" checked name="true ' + i + '"/></div>').appendTo('#Exect');
 					}
 				}
+				$("#sub").click(function () {
+					$("#Exect").hide();
+					$("#sub").hide();
+					var num = 1;
+					var answers = $(".answers").val();
+					$('<div id="MainQ">' + MainQuestion + '</div>').appendTo("#result");
+					$("<div class='questions-result'>" + $("#" + num + "").val() + "?" + "</div>").appendTo("#result");
+					$("<label for='answer-variant'> Варианты ответа</label>").appendTo("#result");
+					for(var z = 2; z <= b; z++){
+						$("<labe for='" + z + "'> " +  + "</labe>");
+						$('<input type="radio" name="answer-variant" id="' + z + '" class="checkbox"/>').appendTo("#result");
+					}
+				})
 			}
 		})
 	})
@@ -52,5 +66,8 @@
 
 	</form>
 	<input type="button" value="Посмотреть" id="sub" class="input">
+	<form action="index.html" id="result">
+
+	</form>
 </body>
 </html>
